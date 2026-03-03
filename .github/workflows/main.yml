@@ -65,7 +65,7 @@ jobs:
         run: |
           # Use a reusable auth key (valid up to 90 days) stored as a secret
           & "$env:ProgramFiles\Tailscale\tailscale.exe" up `
-            --authkey=${{ secrets.TAILSCALE_AUTH_KEY }} `
+            --authkey=${{ secrets.WINDOWS_TAILSCALE_AUTH_KEY }} `
             --hostname=gh-rdp-$env:GITHUB_RUN_ID
 
           # Wait for Tailscale to assign an IP
